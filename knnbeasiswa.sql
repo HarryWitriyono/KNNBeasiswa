@@ -22,22 +22,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `data_testing`
---
-
-CREATE TABLE `data_testing` (
-  `No` int(11) NOT NULL,
-  `NIS` varchar(20) DEFAULT NULL,
-  `Nama` varchar(100) DEFAULT NULL,
-  `Nilai_Raport` decimal(5,2) DEFAULT NULL,
-  `Akademik` int(11) DEFAULT NULL,
-  `Non_Akademik` int(11) DEFAULT NULL,
-  `Penghasilan_Ortu` int(11) DEFAULT NULL,
-  `Kepribadian` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Dumping data for table `data_testing`
 --
@@ -65,22 +49,6 @@ INSERT INTO `data_testing` (`No`, `NIS`, `Nama`, `Nilai_Raport`, `Akademik`, `No
 (20, '15880', 'Rizqi Fadillah', 81.45, 1, 1, 4, 3);
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `data_training`
---
-
-CREATE TABLE `data_training` (
-  `No` int(11) NOT NULL,
-  `NIS` varchar(20) DEFAULT NULL,
-  `Nama` varchar(100) DEFAULT NULL,
-  `Nilai_Raport` decimal(5,2) DEFAULT NULL,
-  `Nilai_Akademik` int(11) DEFAULT NULL,
-  `Nilai_Non_Akademik` int(11) DEFAULT NULL,
-  `Penghasilan_Ortu` int(11) DEFAULT NULL,
-  `Kepribadian` int(11) DEFAULT NULL,
-  `Status_Beasiswa` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `data_training`
@@ -111,15 +79,6 @@ INSERT INTO `data_training` (`No`, `NIS`, `Nama`, `Nilai_Raport`, `Nilai_Akademi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nilaikepribadian`
---
-
-CREATE TABLE `nilaikepribadian` (
-  `Nilai` int(11) NOT NULL,
-  `Parameter` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
 -- Dumping data for table `nilaikepribadian`
 --
 
@@ -131,15 +90,6 @@ INSERT INTO `nilaikepribadian` (`Nilai`, `Parameter`) VALUES
 (5, 'Sangat baik');
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `penghasilanorangtua`
---
-
-CREATE TABLE `penghasilanorangtua` (
-  `Nilai` int(11) NOT NULL,
-  `Parameter` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `penghasilanorangtua`
@@ -155,15 +105,6 @@ INSERT INTO `penghasilanorangtua` (`Nilai`, `Parameter`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prestasiakademik`
---
-
-CREATE TABLE `prestasiakademik` (
-  `Nilai` int(11) NOT NULL,
-  `Parameter` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
 -- Dumping data for table `prestasiakademik`
 --
 
@@ -175,16 +116,6 @@ INSERT INTO `prestasiakademik` (`Nilai`, `Parameter`) VALUES
 (5, 'Prestasi Tingkat Nasional');
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `prestasinonakademik`
---
-
-CREATE TABLE `prestasinonakademik` (
-  `Nilai` int(11) NOT NULL,
-  `Parameter` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Dumping data for table `prestasinonakademik`
 --
@@ -195,63 +126,6 @@ INSERT INTO `prestasinonakademik` (`Nilai`, `Parameter`) VALUES
 (3, 'Prestasi Tingkat Propinsi'),
 (4, 'Prestasi Tingkat Nasional');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `data_testing`
---
-ALTER TABLE `data_testing`
-  ADD PRIMARY KEY (`No`),
-  ADD UNIQUE KEY `NIS` (`NIS`);
-
---
--- Indexes for table `data_training`
---
-ALTER TABLE `data_training`
-  ADD PRIMARY KEY (`No`),
-  ADD UNIQUE KEY `NIS` (`NIS`);
-
---
--- Indexes for table `nilaikepribadian`
---
-ALTER TABLE `nilaikepribadian`
-  ADD PRIMARY KEY (`Nilai`);
-
---
--- Indexes for table `penghasilanorangtua`
---
-ALTER TABLE `penghasilanorangtua`
-  ADD PRIMARY KEY (`Nilai`);
-
---
--- Indexes for table `prestasiakademik`
---
-ALTER TABLE `prestasiakademik`
-  ADD PRIMARY KEY (`Nilai`);
-
---
--- Indexes for table `prestasinonakademik`
---
-ALTER TABLE `prestasinonakademik`
-  ADD PRIMARY KEY (`Nilai`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `data_testing`
---
-ALTER TABLE `data_testing`
-  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `data_training`
---
-ALTER TABLE `data_training`
-  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
